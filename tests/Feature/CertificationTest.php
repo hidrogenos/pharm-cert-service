@@ -28,7 +28,7 @@ class CertificationTest extends TestCase
             'service',
             'data' => [
                 "id",
-                "nro_control" => $certificate->nro_control,
+                "nro_control",
                 "id_pieza",
                 "producto",
                 "lote",
