@@ -24,7 +24,7 @@ class CertificationController extends Controller
     public function validateCertificate(string $nroControl): JsonResponse
     {
         //Return error 404 response if Invoice was not found
-        if (!$this->certificateEloquent->findByControlNo($nroControl))
+        if ($this->certificateEloquent->findByControlNo($nroControl)->resource === null)
             return $this->errorResponse(
                 self::SERVICE_NAME,
                 Response::HTTP_NOT_FOUND,

@@ -62,4 +62,19 @@ class CertificationTest extends TestCase
             ]
         ]);
     }
+
+    /** @test */
+    public function should_fail_validate_certificate()
+    {
+        //No Data and try to validate
+        $response = $this->get('/api/V1/validate-cert/PT21-1014');
+
+        $response->assertStatus(404);
+        $response->assertJsonStructure([
+            'errors',
+            'message',
+            'status_code',
+            'service',
+        ]);
+    }
 }

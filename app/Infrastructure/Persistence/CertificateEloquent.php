@@ -24,6 +24,6 @@ class CertificateEloquent
      */
     public function findByControlNo($nroControl): CertificateResource
     {
-        return CertificateResource::make($this->model->with('variables')->where('nro_control', $nroControl)->first());
+        return CertificateResource::make($this->model->with('variables')->firstWhere('nro_control', $nroControl));
     }
 }
