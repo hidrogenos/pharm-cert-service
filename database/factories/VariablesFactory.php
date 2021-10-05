@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Factories;
+
 use App\Certificate;
 use App\Variables;
 use Illuminate\Database\Eloquent\Factories\Factory;

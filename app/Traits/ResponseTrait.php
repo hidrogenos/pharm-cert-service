@@ -26,7 +26,7 @@ trait ResponseTrait
     {
         return response()->json([
             'message' => $message,
-            'statusCode' => $statusCode,
+            'status_code' => $statusCode,
             'service' => $service,
             'data' => $data
         ], $statusCode);
@@ -48,7 +48,7 @@ trait ResponseTrait
             'errors' => $errors,
             'message' => $message,
             'service' => $service,
-            'statusCode' => $statusCode
+            'status_code' => $statusCode
         ], $statusCode);
     }
 

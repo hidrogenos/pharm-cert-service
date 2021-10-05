@@ -9,6 +9,7 @@ class CreateCertificatesTable extends Migration
     public function up()
     {
         Schema::create('certificates', function (Blueprint $table) {
+
             $table->uuid('id')->primary();
             $table->string('nro_control');
             $table->string('id_pieza');

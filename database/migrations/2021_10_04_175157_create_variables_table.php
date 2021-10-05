@@ -9,6 +9,7 @@ class CreateVariablesTable extends Migration
     public function up()
     {
         Schema::create('variables', function (Blueprint $table) {
+
             $table->uuid('id')->primary();
             $table->string('ensayo');
             $table->string('especificaciones', 500);
@@ -19,7 +20,7 @@ class CreateVariablesTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('certificate_id')->references('id')->on('certificate')->onDelete('cascade');
+            $table->foreign('certificate_id')->references('id')->on('certificates')->onDelete('cascade');
         });
     }
 
